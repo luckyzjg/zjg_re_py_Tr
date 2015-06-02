@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<!DOCTYPE nmaprun>
+<!-- Nmap 6.47 scan initiated Sat Jan 31 16:57:07 2015 as: C:\\Users\\Wayne\\AppData\\Local\\Temp\\HouseCall\\tmase\\nmap\\nmap.exe -T4 -O -sS -sU -F -v -&#45;script housecall -oX C:\\Users\\Wayne\\AppData\\Local\\Temp\\TmEnv\\nmap.xml -&#45;no-stylesheet 10.0.0.1 10.0.0.2 10.0.0.3 10.0.0.4 10.0.0.5 10.0.0.8 10.0.0.9 10.0.0.11 -->
+<nmaprun scanner="nmap" args="C:\\Users\\Wayne\\AppData\\Local\\Temp\\HouseCall\\tmase\\nmap\\nmap.exe -T4 -O -sS -sU -F -v -&#45;script housecall -oX C:\\Users\\Wayne\\AppData\\Local\\Temp\\TmEnv\\nmap.xml -&#45;no-stylesheet 10.0.0.1 10.0.0.2 10.0.0.3 10.0.0.4 10.0.0.5 10.0.0.8 10.0.0.9 10.0.0.11" start="1422741427" startstr="Sat Jan 31 16:57:07 2015" version="6.47" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3702-3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49191-49194,49200-49201,65024"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1422741428"/>
+<taskend task="ARP Ping Scan" time="1422741429" extrainfo="8 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 8 hosts." time="1422741429"/>
+<taskend task="Parallel DNS resolution of 8 hosts." time="1422741429"/>
+<taskbegin task="SYN Stealth Scan" time="1422741429"/>
+<taskend task="SYN Stealth Scan" time="1422741432" extrainfo="800 total ports"/>
+<taskbegin task="UDP Scan" time="1422741432"/>
+<taskend task="UDP Scan" time="1422741571" extrainfo="800 total ports"/>
+<taskbegin task="NSE" time="1422741597"/>
+<taskend task="NSE" time="1422741613"/>
+<host starttime="1422741428" endtime="1422741602"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.1" addrtype="ipv4"/>
+<address addr="C4:27:95:36:EE:6D" addrtype="mac" vendor="Technicolor USA"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="95">
+<extrareasons reason="no-responses" count="95"/>
+</extraports>
+<extraports state="filtered" count="94">
+<extrareasons reason="no-responses" count="94"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-default-auth" output="nothing matched"/><script id="http-homepage" output=" "><table key="response_header">
+<elem>Content-type: text/html</elem>
+<elem>Expires: Thu, 3 Oct 1968 12:00:00 GMT</elem>
+<elem>Connection: close</elem>
+<elem>Pragma: no-cache</elem>
+<elem>Content-Length: 4561</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;!DOCTYPE html PUBLIC &apos;-//W3C//DTD XHTML 1.0 Strict//EN&apos; &apos;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&apos;&gt;&#xa;&lt;html xmlns=&apos;http://www.w3.org/1999/xhtml&apos; xml:lang=&apos;en&apos; lang=&apos;en&apos;&gt;&#xa;&lt;head&gt;&#xa;    &lt;title&gt;XFINITY&lt;/title&gt;&#xa;    &lt;!-&#45;CSS-&#45;&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;print&apos; href=&apos;/print.css&apos; /&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;screen&apos; href=&apos;/reset-meyer-1.0.min.css&apos; /&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;screen&apos; href=&apos;/global.css&apos; /&gt;&#xa;    &lt;!-&#45;[if IE 6]&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;/ie6.css&apos; /&gt;&#xa;    &lt;![endif]-&#45;&gt;&#xa;    &lt;!-&#45;[if IE 7]&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;/ie7.css&apos; /&gt;&#xa;    &lt;![endif]-&#45;&gt;&#xa;&#xa;    &lt;!-&#45;Character Encoding-&#45;&gt;&#xa;    &lt;meta http-equiv=&apos;Content-Type&apos; content=&apos;text/html;charset=utf-8&apos; /&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery-1.3.2.min.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery.validate.min.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery.alerts.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/global.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/tch_global.js&apos;&gt;&lt;/script&gt;&#xa;&lt;/head&gt;&#xa;&#xa;&lt;body &gt;&#xa;    &lt;!-&#45;Main Container - Centers Everything-&#45;&gt;&#xa;    &lt;div id=&apos;container&apos;&gt;&#xa;&#xa;        &lt;!-&#45;Header-&#45;&gt;&#xa;        &lt;div id=&apos;header&apos;&gt;&#xa;   &lt;h2 id=logo&gt;&lt;a&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&#xa;        &lt;/div&gt; &lt;!-&#45; end #header -&#45;&gt;&#xa;&#xa;        &lt;!-&#45;Main Content-&#45;&gt;&#xa;        &lt;div id=&apos;main-content&apos;&gt;&#xa;&lt;!-&#45;END of inserting Header.asp into this file-&#45;&gt;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&lt;!-&#45; $Id: home_loggedout.php 3158 2010-01-08 23:32:05Z slemoine $ -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&lt;div id=&quot;sub-header&quot;&gt;&#xd;&#xa;&#xd;&#xa;&lt;/div&gt;&lt;!-&#45; end #sub-header -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot;&gt;&#xd;&#xa;$(document).ready(function() {&#xd;&#xa;&#xd;&#xa;    $(&quot;#pageForm&quot;).validate({&#xd;&#xa;        errorElement : &quot;p&quot;&#xd;&#xa;        ,errorContainer : &quot;#error-msg-box&quot;&#xd;&#xa;        ,invalidHandler: function(form, validator) {&#xd;&#xa;            var errors = validator.numberOfInvalids();&#xd;&#xa;            if (errors) {&#xd;&#xa;                var message = errors == 1 ? &apos;There was an error. It has been highlighted&apos; : &apos;There were &apos; + errors + &apos; errors. They have been highlighted&apos;;&#xd;&#xa;                $(&quot;div.error&quot;).html(message);&#xd;&#xa;                $(&quot;div.error&quot;).show();&#xd;&#xa;            } else {&#xd;&#xa;                $(&quot;div.error&quot;).hide();&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;        ,rules : {&#xd;&#xa;            loginUsername: {&#xd;&#xa;                required: true&#xd;&#xa;                ,minlength: 3&#xd;&#xa;            }&#xd;&#xa;            ,loginPassword: {&#xd;&#xa;                required: true&#xd;&#xa;                ,minlength: 4&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;        ,messages: {&#xd;&#xa;            loginUsername: {&#xd;&#xa;                required: &quot;Username cannot be blank. Please enter a valid username.&quot;&#xd;&#xa;            }&#xd;&#xa;            ,loginPassword: {&#xd;&#xa;                required: &quot;Password cannot be blank. Please enter a valid password.&quot;&#xd;&#xa;                ,minlength: &quot;Password must be at least 8 characters.&quot;&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;    });&#xd;&#xa;});&#xd;&#xa;&lt;/script&gt;&#xd;&#xa;&#xd;&#xa;&lt;div id=&quot;content&quot;&gt;  &#xd;&#xa;&#x9;&lt;h1&gt;Log In&lt;/h1&gt;&#xd;&#xa;&#xd;&#xa;    &lt;div id=&quot;login&quot; class=&quot;module forms&quot;&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&lt;form action=&quot;/goform/home_loggedout&quot; method=&quot;post&quot; id=&quot;pageForm&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;      &#x9;&#x9;&lt;p&gt;Please log in to manage your router.&lt;/p&gt;&#xd;&#xa;        &lt;/div&gt;&#xd;&#xa;&#xd;&#xa;        &lt;div class=&quot;error&quot;&gt;&lt;/div&gt;&#xd;&#xa;&#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;text&quot; id=&quot;loginUsername&quot; name=&quot;loginUsername&quot; size=&quot;20&quot; class=&quot;text&quot; value=&quot;&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;password&quot; id=&quot;loginPassword&quot; name=&quot;loginPassword&quot; size=&quot;20&quot; class=&quot;text&quot; value=&quot;&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-btn&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;submit&quot; class=&quot;btn&quot; value=&quot;Log In&quot; /&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#x9;&lt;/form&gt;&#xd;&#xa;    &lt;/div&gt;&#xd;&#xa;&lt;/div&gt;&lt;!-&#45; end #content -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot;&gt;&#xd;&#xa;  document.getElementById(&quot;loginUsername&quot;).focus();&#xd;&#xa;  document.getElementById(&quot;loginUsername&quot;).select();&#xd;&#xa;&lt;/script&gt;&#xd;&#xa;&#xd;&#xa;&lt;!-&#45;START of inserting footer.asp into this file -&#45;&gt;&#xa;            &lt;!-&#45; $Id: footer.php 2976 2009-09-02 21:42:51Z cporto $ -&#45;&gt;&#xa;&#x9;&#x9;&lt;/div&gt; &lt;!-&#45; end #main-content-&#45;&gt;&#xa;&#xa;&#x9;&#x9;&lt;!-&#45;Footer-&#45;&gt;&#xa;&#x9;&#x9;&lt;div id=&apos;footer&apos;&gt;&#xa;&#x9;&#x9;&#x9;&lt;ul id=&apos;footer-links&apos;&gt;&#xa;               &lt;li class=&apos;first-child&apos;&gt;&lt;a href=&apos;http://www.xfinity.com&apos; target=&apos;_blank&apos;&gt;Xfinity.com&lt;/a&gt;&lt;/li&gt;&#xa;               &lt;li&gt;&lt;a href=&apos;https://customer.comcast.com/&apos; target=&apos;_blank&apos;&gt;customerCentral&lt;/a&gt;&lt;/li&gt;&#xa;               &lt;li&gt;&lt;a href=&apos;http://customer.comcast.com/userguides&apos; target=&apos;_blank&apos;&gt;User Guide&lt;/a&gt;&lt;/li&gt;&#xa;&#x9;&#x9;&#x9;&lt;/ul&gt;&#xa;&#x9;&#x9;&lt;/div&gt; &lt;!-&#45; end #footer -&#45;&gt;&#xa;&#x9;&lt;/div&gt; &lt;!-&#45; end #container -&#45;&gt;&#xa;&lt;/body&gt;&#xa;&lt;/html&gt;&#xa;&lt;!-&#45;END of inserting footer.asp into this file-&#45;&gt;&#xa;&#xd;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/><script id="http-default-auth" output="nothing matched"/><script id="http-homepage" output=" "><table key="response_header">
+<elem>Content-type: text/html</elem>
+<elem>Expires: Thu, 3 Oct 1968 12:00:00 GMT</elem>
+<elem>Connection: close</elem>
+<elem>Pragma: no-cache</elem>
+<elem>Content-Length: 4561</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;!DOCTYPE html PUBLIC &apos;-//W3C//DTD XHTML 1.0 Strict//EN&apos; &apos;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&apos;&gt;&#xa;&lt;html xmlns=&apos;http://www.w3.org/1999/xhtml&apos; xml:lang=&apos;en&apos; lang=&apos;en&apos;&gt;&#xa;&lt;head&gt;&#xa;    &lt;title&gt;XFINITY&lt;/title&gt;&#xa;    &lt;!-&#45;CSS-&#45;&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;print&apos; href=&apos;/print.css&apos; /&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;screen&apos; href=&apos;/reset-meyer-1.0.min.css&apos; /&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; media=&apos;screen&apos; href=&apos;/global.css&apos; /&gt;&#xa;    &lt;!-&#45;[if IE 6]&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;/ie6.css&apos; /&gt;&#xa;    &lt;![endif]-&#45;&gt;&#xa;    &lt;!-&#45;[if IE 7]&gt;&#xa;    &lt;link rel=&apos;stylesheet&apos; type=&apos;text/css&apos; href=&apos;/ie7.css&apos; /&gt;&#xa;    &lt;![endif]-&#45;&gt;&#xa;&#xa;    &lt;!-&#45;Character Encoding-&#45;&gt;&#xa;    &lt;meta http-equiv=&apos;Content-Type&apos; content=&apos;text/html;charset=utf-8&apos; /&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery-1.3.2.min.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery.validate.min.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/jquery.alerts.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/global.js&apos;&gt;&lt;/script&gt;&#xa;    &lt;script type=&apos;text/javascript&apos; src=&apos;/tch_global.js&apos;&gt;&lt;/script&gt;&#xa;&lt;/head&gt;&#xa;&#xa;&lt;body &gt;&#xa;    &lt;!-&#45;Main Container - Centers Everything-&#45;&gt;&#xa;    &lt;div id=&apos;container&apos;&gt;&#xa;&#xa;        &lt;!-&#45;Header-&#45;&gt;&#xa;        &lt;div id=&apos;header&apos;&gt;&#xa;   &lt;h2 id=logo&gt;&lt;a&gt;&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&#xa;        &lt;/div&gt; &lt;!-&#45; end #header -&#45;&gt;&#xa;&#xa;        &lt;!-&#45;Main Content-&#45;&gt;&#xa;        &lt;div id=&apos;main-content&apos;&gt;&#xa;&lt;!-&#45;END of inserting Header.asp into this file-&#45;&gt;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&lt;!-&#45; $Id: home_loggedout.php 3158 2010-01-08 23:32:05Z slemoine $ -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&lt;div id=&quot;sub-header&quot;&gt;&#xd;&#xa;&#xd;&#xa;&lt;/div&gt;&lt;!-&#45; end #sub-header -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot;&gt;&#xd;&#xa;$(document).ready(function() {&#xd;&#xa;&#xd;&#xa;    $(&quot;#pageForm&quot;).validate({&#xd;&#xa;        errorElement : &quot;p&quot;&#xd;&#xa;        ,errorContainer : &quot;#error-msg-box&quot;&#xd;&#xa;        ,invalidHandler: function(form, validator) {&#xd;&#xa;            var errors = validator.numberOfInvalids();&#xd;&#xa;            if (errors) {&#xd;&#xa;                var message = errors == 1 ? &apos;There was an error. It has been highlighted&apos; : &apos;There were &apos; + errors + &apos; errors. They have been highlighted&apos;;&#xd;&#xa;                $(&quot;div.error&quot;).html(message);&#xd;&#xa;                $(&quot;div.error&quot;).show();&#xd;&#xa;            } else {&#xd;&#xa;                $(&quot;div.error&quot;).hide();&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;        ,rules : {&#xd;&#xa;            loginUsername: {&#xd;&#xa;                required: true&#xd;&#xa;                ,minlength: 3&#xd;&#xa;            }&#xd;&#xa;            ,loginPassword: {&#xd;&#xa;                required: true&#xd;&#xa;                ,minlength: 4&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;        ,messages: {&#xd;&#xa;            loginUsername: {&#xd;&#xa;                required: &quot;Username cannot be blank. Please enter a valid username.&quot;&#xd;&#xa;            }&#xd;&#xa;            ,loginPassword: {&#xd;&#xa;                required: &quot;Password cannot be blank. Please enter a valid password.&quot;&#xd;&#xa;                ,minlength: &quot;Password must be at least 8 characters.&quot;&#xd;&#xa;            }&#xd;&#xa;        }&#xd;&#xa;    });&#xd;&#xa;});&#xd;&#xa;&lt;/script&gt;&#xd;&#xa;&#xd;&#xa;&lt;div id=&quot;content&quot;&gt;  &#xd;&#xa;&#x9;&lt;h1&gt;Log In&lt;/h1&gt;&#xd;&#xa;&#xd;&#xa;    &lt;div id=&quot;login&quot; class=&quot;module forms&quot;&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&lt;form action=&quot;/goform/home_loggedout&quot; method=&quot;post&quot; id=&quot;pageForm&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;      &#x9;&#x9;&lt;p&gt;Please log in to manage your router.&lt;/p&gt;&#xd;&#xa;        &lt;/div&gt;&#xd;&#xa;&#xd;&#xa;        &lt;div class=&quot;error&quot;&gt;&lt;/div&gt;&#xd;&#xa;&#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;text&quot; id=&quot;loginUsername&quot; name=&quot;loginUsername&quot; size=&quot;20&quot; class=&quot;text&quot; value=&quot;&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-row&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;password&quot; id=&quot;loginPassword&quot; name=&quot;loginPassword&quot; size=&quot;20&quot; class=&quot;text&quot; value=&quot;&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#xd;&#xa;    &#x9;&#x9;&lt;div class=&quot;form-btn&quot;&gt;&#xd;&#xa;    &#x9;&#x9;&#x9;&lt;input type=&quot;submit&quot; class=&quot;btn&quot; value=&quot;Log In&quot; /&gt;&#xd;&#xa;    &#x9;&#x9;&lt;/div&gt;&#xd;&#xa;    &#x9;&lt;/form&gt;&#xd;&#xa;    &lt;/div&gt;&#xd;&#xa;&lt;/div&gt;&lt;!-&#45; end #content -&#45;&gt;&#xd;&#xa;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot;&gt;&#xd;&#xa;  document.getElementById(&quot;loginUsername&quot;).focus();&#xd;&#xa;  document.getElementById(&quot;loginUsername&quot;).select();&#xd;&#xa;&lt;/script&gt;&#xd;&#xa;&#xd;&#xa;&lt;!-&#45;START of inserting footer.asp into this file -&#45;&gt;&#xa;            &lt;!-&#45; $Id: footer.php 2976 2009-09-02 21:42:51Z cporto $ -&#45;&gt;&#xa;&#x9;&#x9;&lt;/div&gt; &lt;!-&#45; end #main-content-&#45;&gt;&#xa;&#xa;&#x9;&#x9;&lt;!-&#45;Footer-&#45;&gt;&#xa;&#x9;&#x9;&lt;div id=&apos;footer&apos;&gt;&#xa;&#x9;&#x9;&#x9;&lt;ul id=&apos;footer-links&apos;&gt;&#xa;               &lt;li class=&apos;first-child&apos;&gt;&lt;a href=&apos;http://www.xfinity.com&apos; target=&apos;_blank&apos;&gt;Xfinity.com&lt;/a&gt;&lt;/li&gt;&#xa;               &lt;li&gt;&lt;a href=&apos;https://customer.comcast.com/&apos; target=&apos;_blank&apos;&gt;customerCentral&lt;/a&gt;&lt;/li&gt;&#xa;               &lt;li&gt;&lt;a href=&apos;http://customer.comcast.com/userguides&apos; target=&apos;_blank&apos;&gt;User Guide&lt;/a&gt;&lt;/li&gt;&#xa;&#x9;&#x9;&#x9;&lt;/ul&gt;&#xa;&#x9;&#x9;&lt;/div&gt; &lt;!-&#45; end #footer -&#45;&gt;&#xa;&#x9;&lt;/div&gt; &lt;!-&#45; end #container -&#45;&gt;&#xa;&lt;/body&gt;&#xa;&lt;/html&gt;&#xa;&lt;!-&#45;END of inserting footer.asp into this file-&#45;&gt;&#xa;&#xd;&#xa;</elem>
+</script><script id="ssl-cert" output="Subject: commonName=C4:27:95:36:EE:69/organizationName=Technicolor/countryName=US&#xa;Issuer: commonName=Technicolor Cable Modem Root Certificate Authority/organizationName=Technicolor/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Not valid before: 2013-08-10T08:35:23+00:00&#xa;Not valid after:  2033-08-10T09:05:23+00:00&#xa;MD5:   d149 75b8 c76e cfee 1f17 5715 23aa 3b24&#xa;SHA-1: 62f8 ce74 3852 387c 7a6e c034 d6c6 6992 d8b3 75b5"><table key="subject">
+<elem key="countryName">US</elem>
+<elem key="organizationalUnitName">Cable Product</elem>
+<elem key="organizationName">Technicolor</elem>
+<elem key="commonName">C4:27:95:36:EE:69</elem>
+</table>
+<table key="issuer">
+<elem key="countryName">US</elem>
+<elem key="organizationalUnitName">DOCSIS</elem>
+<elem key="organizationName">Technicolor</elem>
+<elem key="commonName">Technicolor Cable Modem Root Certificate Authority</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">1024</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notAfter">2033-08-10T09:05:23+00:00</elem>
+<elem key="notBefore">2013-08-10T08:35:23+00:00</elem>
+</table>
+<elem key="md5">d14975b8c76ecfee1f17571523aa3b24</elem>
+<elem key="sha1">62f8ce743852387c7a6ec034d6c66992d8b375b5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDETCCAfmgAwIBAgIET1khUTANBgkqhkiG9w0BAQUFADBxMQswCQYDVQQGEwJV&#xa;UzEUMBIGA1UEChMLVGVjaG5pY29sb3IxDzANBgNVBAsTBkRPQ1NJUzE7MDkGA1UE&#xa;AxMyVGVjaG5pY29sb3IgQ2FibGUgTW9kZW0gUm9vdCBDZXJ0aWZpY2F0ZSBBdXRo&#xa;b3JpdHkwHhcNMTMwODEwMDkzNTIzWhcNMzMwODEwMTAwNTIzWjBXMQswCQYDVQQG&#xa;EwJVUzEUMBIGA1UEChMLVGVjaG5pY29sb3IxFjAUBgNVBAsTDUNhYmxlIFByb2R1&#xa;Y3QxGjAYBgNVBAMTEUM0OjI3Ojk1OjM2OkVFOjY5MIGfMA0GCSqGSIb3DQEBAQUA&#xa;A4GNADCBiQKBgQCd24exD4YgbquN75iIqT5Zi3YTfkoL8h0iMbml13jxh/fNw5sn&#xa;Po//eDZzQ1u1ok3v3JeOACTU3CQtGX+/I1Wuutn5myZ4eg2U2XY81CuUHsftNo0i&#xa;so2z1hMa2u2bK8NvJ3GjfXiwpR30PPWPjQIPbspj6oFXFgBXu8Eu1O79LwIDAQAB&#xa;o08wTTALBgNVHQ8EBAMCBaAwHwYDVR0jBBgwFoAUv+4FV7KYBuZ1A/YiabIcLSLG&#xa;Q48wHQYDVR0OBBYEFMiVfR8QK/RgaXSiRckSwpdcFb9iMA0GCSqGSIb3DQEBBQUA&#xa;A4IBAQA/UdYwyG5FfYVaSoTu5Wh2xhI83ospZZyR2GaZj12wY+i6cDJzZHrxl4OS&#xa;aE6gQvu/F3E1Co8OeVIIkzK9fPlXg3H6s9EV/IHjEq1x7Yj4vabjLKHyu0ETa/v5&#xa;U3GCchDmCx2IicZVVwA4Mn95ax2woRc4UfEFvojH6n/Ab+O8i2z156R8vwTCRFGq&#xa;JTtXRNCHWNp15j7+7Cutv5exm9+MiRt/QSgTbIag25TKyLhpQO+LmUY02Te5f8rV&#xa;ngoG71QTSfNUW1+n/ODfYvVa2adrWCw/02DzGwRniYdcqwpzNkRCIKsq/9ojhpiU&#xa;f9Er4DmXa6bBM9ou6OLmYyBJsFAb&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="1900"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1812"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="radius" method="table" conf="3"/></port>
+<port protocol="udp" portid="1813"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="radacct" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="open" reason="script-set" reason_ttl="0"/><service name="upnp" method="table" conf="3"/><script id="upnp-info" output=" "><table>
+<table key="response_header">
+<elem>Content-type: text/xml</elem>
+<elem>Expires: Thu, 3 Oct 1968 12:00:00 GMT</elem>
+<elem>Content-Length: 3068</elem>
+<elem>Connection: close</elem>
+<elem>Pragma: no-cache</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xd;&#xa;&lt;root xmlns=&quot;urn:schemas-upnp-org:device-1-0&quot;&gt;&#xd;&#xa;&lt;specVersion&gt;&#xd;&#xa;&lt;major&gt;1&lt;/major&gt;&#xd;&#xa;&lt;minor&gt;0&lt;/minor&gt;&#xd;&#xa;&lt;/specVersion&gt;&#xd;&#xa;&lt;URLBase&gt;http://10.0.0.1:80&lt;/URLBase&gt;&lt;device&gt;&#xd;&#xa;&lt;deviceType&gt;urn:schemas-upnp-org:device:InternetGatewayDevice:1&lt;/deviceType&gt;&#xd;&#xa;&lt;friendlyName&gt;Technicolor TC8305C&lt;/friendlyName&gt;&#xd;&#xa;&lt;manufacturer&gt;Technicolor&lt;/manufacturer&gt;&#xd;&#xa;&lt;manufacturerURL&gt;http://www.technicolor.com&lt;/manufacturerURL&gt;&#xd;&#xa;&lt;modelDescription&gt;TC8305C&lt;/modelDescription&gt;&#xd;&#xa;&lt;modelName&gt;TC8305C&lt;/modelName&gt;&#xd;&#xa;&lt;modelNumber&gt;TC8305C&lt;/modelNumber&gt;&#xd;&#xa;&lt;modelURL&gt;http://customer.comcast.com/Pages/HelpNFC.aspx?id=e70e9d0e-d9eb-4748-b163-636a323e7950&lt;/modelURL&gt;&#xd;&#xa;&lt;serialNumber&gt;1342309000&lt;/serialNumber&gt;&#xd;&#xa;&lt;UDN&gt;uuid:8e62b38b-f3c0-07e6-288f-c4279536ee6d&lt;/UDN&gt;&#xd;&#xa;&lt;UPC&gt;123456789012&lt;/UPC&gt;&#xd;&#xa;&lt;serviceList&gt;&#xd;&#xa;&lt;service&gt;&#xd;&#xa;&lt;serviceType&gt;urn:schemas-upnp-org:service:Layer3Forwarding:1&lt;/serviceType&gt;&#xd;&#xa;&lt;serviceId&gt;urn:upnp-org:serviceId:L3Forwarding1&lt;/serviceId&gt;&#xd;&#xa;&lt;SCPDURL&gt;/Layer3Forwarding.xml&lt;/SCPDURL&gt;&#xd;&#xa;&lt;controlURL&gt;/Layer3Forwarding&lt;/controlURL&gt;&#xd;&#xa;&lt;eventSubURL&gt;/Layer3Forwarding&lt;/eventSubURL&gt;&#xd;&#xa;&lt;/service&gt;&#xd;&#xa;&lt;/serviceList&gt;&#xd;&#xa;&lt;deviceList&gt;&#xd;&#xa;&lt;device&gt;&#xd;&#xa;&lt;deviceType&gt;urn:schemas-upnp-org:device:WANDevice:1&lt;/deviceType&gt;&#xd;&#xa;&lt;friendlyName&gt;Technicolor TC8305C&lt;/friendlyName&gt;&#xd;&#xa;&lt;manufacturer&gt;Technicolor&lt;/manufacturer&gt;&#xd;&#xa;&lt;manufacturerURL&gt;http://www.technicolor.com&lt;/manufacturerURL&gt;&#xd;&#xa;&lt;modelDescription&gt;TC8305C&lt;/modelDescription&gt;&#xd;&#xa;&lt;modelName&gt;TC8305C&lt;/modelName&gt;&#xd;&#xa;&lt;modelNumber&gt;TC8305C&lt;/modelNumber&gt;&#xd;&#xa;&lt;modelURL&gt;http://customer.comcast.com/Pages/HelpNFC.aspx?id=e70e9d0e-d9eb-4748-b163-636a323e7950&lt;/modelURL&gt;&#xd;&#xa;&lt;serialNumber&gt;1342309000&lt;/serialNumber&gt;&#xd;&#xa;&lt;UDN&gt;uuid:463b460d-3c29-8e33-4af7-c4279536ee6d&lt;/UDN&gt;&#xd;&#xa;&lt;UPC&gt;123456789012&lt;/UPC&gt;&#xd;&#xa;&lt;serviceList&gt;&#xd;&#xa;&lt;service&gt;&#xd;&#xa;&lt;serviceType&gt;urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1&lt;/serviceType&gt;&#xd;&#xa;&lt;serviceId&gt;urn:upnp-org:serviceId:WANCommonIFC1&lt;/serviceId&gt;&#xd;&#xa;&lt;SCPDURL&gt;/WANCommonInterfaceConfig.xml&lt;/SCPDURL&gt;&#xd;&#xa;&lt;controlURL&gt;/WANCommonInterfaceConfig&lt;/controlURL&gt;&#xd;&#xa;&lt;eventSubURL&gt;/WANCommonInterfaceConfig&lt;/eventSubURL&gt;&#xd;&#xa;&lt;/service&gt;&#xd;&#xa;&lt;/serviceList&gt;&#xd;&#xa;&lt;deviceList&gt;&#xd;&#xa;&lt;device&gt;&#xd;&#xa;&lt;deviceType&gt;urn:schemas-upnp-org:device:WANConnectionDevice:1&lt;/deviceType&gt;&#xd;&#xa;&lt;friendlyName&gt;Technicolor TC8305C&lt;/friendlyName&gt;&#xd;&#xa;&lt;manufacturer&gt;Technicolor&lt;/manufacturer&gt;&#xd;&#xa;&lt;manufacturerURL&gt;http://www.technicolor.com&lt;/manufacturerURL&gt;&#xd;&#xa;&lt;modelDescription&gt;TC8305C&lt;/modelDescription&gt;&#xd;&#xa;&lt;modelName&gt;TC8305C&lt;/modelName&gt;&#xd;&#xa;&lt;modelNumber&gt;TC8305C&lt;/modelNumber&gt;&#xd;&#xa;&lt;modelURL&gt;http://customer.comcast.com/Pages/HelpNFC.aspx?id=e70e9d0e-d9eb-4748-b163-636a323e7950&lt;/modelURL&gt;&#xd;&#xa;&lt;serialNumber&gt;1342309000&lt;/serialNumber&gt;&#xd;&#xa;&lt;UDN&gt;uuid:bc36cead-42f6-dd55-0824-c4279536ee6d&lt;/UDN&gt;&#xd;&#xa;&lt;UPC&gt;123456789012&lt;/UPC&gt;&#xd;&#xa;&lt;serviceList&gt;&#xd;&#xa;&lt;service&gt;&#xd;&#xa;&lt;serviceType&gt;urn:schemas-upnp-org:service:WANIPConnection:1&lt;/serviceType&gt;&#xd;&#xa;&lt;serviceId&gt;urn:upnp-org:serviceId:WANIPConn1&lt;/serviceId&gt;&#xd;&#xa;&lt;SCPDURL&gt;/WANIPConnection.xml&lt;/SCPDURL&gt;&#xd;&#xa;&lt;controlURL&gt;/WANIPConnection&lt;/controlURL&gt;&#xd;&#xa;&lt;eventSubURL&gt;/WANIPConnection&lt;/eventSubURL&gt;&#xd;&#xa;&lt;/service&gt;&#xd;&#xa;&lt;/serviceList&gt;&#xd;&#xa;&lt;/device&gt;&#xd;&#xa;&lt;/deviceList&gt;&#xd;&#xa;&lt;/device&gt;&#xd;&#xa;&lt;/deviceList&gt;&#xd;&#xa;&lt;presentationURL&gt;/&lt;/presentationURL&gt;&#xd;&#xa;&lt;/device&gt;&#xd;&#xa;&lt;/root&gt;&#xd;&#xa;</elem>
+<elem key="friendlyName">Technicolor TC8305C</elem>
+<elem key="manufacturer">Technicolor</elem>
+<elem key="modelDescription">TC8305C</elem>
+<elem key="modelName">TC8305C</elem>
+<elem key="modelNumber">TC8305C</elem>
+<elem key="HostServer">UPnP/1.0 UPnP/1.0 UPnP-Device-Host/1.0</elem>
+<elem key="Location">http://10.0.0.1:80/RootDevice.xml</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="23"/>
+<portused state="closed" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="67"/>
+<osmatch name="Cisco EPC3925, DPC2320, Motorola SURFboard SB5101E, or Scientific Atlanta EPC2203 cable modem (eCos 2.0)" accuracy="100" line="11703">
+<osclass type="broadband router" vendor="Cisco" osfamily="eCos" osgen="2.X" accuracy="100"><cpe>cpe:/h:cisco:epc3925</cpe></osclass>
+<osclass type="broadband router" vendor="Motorola" osfamily="eCos" osgen="2.X" accuracy="100"><cpe>cpe:/h:motorola:sb5101e</cpe></osclass>
+<osclass type="broadband router" vendor="Scientific Atlanta" osfamily="eCos" osgen="2.X" accuracy="100"><cpe>cpe:/h:scientific_atlanta:epc2203</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1030166" lastboot="Mon Jan 19 18:50:49 2015"/>
+<distance value="1"/>
+<tcpsequence index="255" difficulty="Good luck!" values="B92718CF,7D16F622,78B21C4,D5500D62,1D64BDD8,C3E6A77A"/>
+<ipidsequence class="Incremental" values="8113,8114,8117,8119,811B,811D"/>
+<tcptssequence class="100HZ" values="623D787,623D792,623D79D,623D7A8,623D7B3,623D7BE"/>
+<times srtt="2888" rttvar="5668" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741582"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.2" addrtype="ipv4"/>
+<address addr="C4:27:95:36:EE:6F" addrtype="mac" vendor="Technicolor USA"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="190">
+<extrareasons reason="resets" count="100"/>
+<extrareasons reason="port-unreaches" count="90"/>
+</extraports>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="120"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="cfdptkt" method="table" conf="3"/></port>
+<port protocol="udp" portid="518"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ntalk" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="3703"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="adobeserver-3" method="table" conf="3"/></port>
+<port protocol="udp" portid="20031"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="bakbonenetvault" method="table" conf="3"/></port>
+<port protocol="udp" portid="32769"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="filenet-rpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49181"><state state="open" reason="udp-response" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49182"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="7"/>
+</os>
+<distance value="1"/>
+<times srtt="7608" rttvar="10580" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741613"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.3" addrtype="ipv4"/>
+<address addr="00:18:E7:E8:F5:3E" addrtype="mac" vendor="Cameo Communications"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="100">
+<extrareasons reason="no-responses" count="100"/>
+</extraports>
+<extraports state="open|filtered" count="100">
+<extrareasons reason="no-responses" count="100"/>
+</extraports>
+</ports>
+<os></os>
+<distance value="1"/>
+<times srtt="0" rttvar="2812" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741601"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.4" addrtype="ipv4"/>
+<address addr="00:23:54:A3:D4:4F" addrtype="mac" vendor="Asustek Computer"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="175">
+<extrareasons reason="resets" count="90"/>
+<extrareasons reason="port-unreaches" count="85"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="554"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rtsp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="wsdapi" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49156"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="7"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="echo" method="table" conf="3"/></port>
+<port protocol="udp" portid="49"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tacacs" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="64"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="497"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="retrospect" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="open" reason="script-set" reason_ttl="0"/><service name="upnp" method="table" conf="3"/><script id="upnp-info" output=" "><table>
+<table key="response_header">
+<elem>Content-Length: 5819</elem>
+<elem>Content-Type: text/xml; charset=&quot;utf-8&quot;</elem>
+<elem>Server: Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0 Microsoft-HTTPAPI/2.0</elem>
+<elem>Date: Sat, 31 Jan 2015 21:59:43 GMT</elem>
+<elem>Connection: close</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;&#xa;&lt;root xmlns=&quot;urn:schemas-upnp-org:device-1-0&quot;&gt;&#xd;&#xa;&#x9;&lt;specVersion&gt;&#xd;&#xa;&#x9;&#x9;&lt;major&gt;1&lt;/major&gt;&#xd;&#xa;&#x9;&#x9;&lt;minor&gt;0&lt;/minor&gt;&#xd;&#xa;&#x9;&lt;/specVersion&gt;&#xd;&#xa;&#x9;&lt;device&gt;&#xd;&#xa;&#x9;&#x9;&lt;UDN&gt;uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5&lt;/UDN&gt;&#xd;&#xa;&#x9;&#x9;&lt;friendlyName&gt;DONNASCOMPUTER: Donna Anthis:&lt;/friendlyName&gt;&#xd;&#xa;&#x9;&#x9;&lt;deviceType&gt;urn:schemas-upnp-org:device:MediaServer:1&lt;/deviceType&gt;&#xd;&#xa;&#x9;&#x9;&lt;manufacturer&gt;Microsoft Corporation&lt;/manufacturer&gt;&#xd;&#xa;&#x9;&#x9;&lt;manufacturerURL&gt;http://www.microsoft.com&lt;/manufacturerURL&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelName&gt;Windows Media Player Sharing&lt;/modelName&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelNumber&gt;12.0&lt;/modelNumber&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelURL&gt;http://go.microsoft.com/fwlink/?LinkId=105926&lt;/modelURL&gt;&#xd;&#xa;&#x9;&#x9;&lt;serialNumber&gt;{0445F608-EF29-4998-AB4B-7130A7DB034A}&lt;/serialNumber&gt;&#xd;&#xa;&#x9;&#x9;&lt;dlna:X_DLNADOC xmlns:dlna=&quot;urn:schemas-dlna-org:device-1-0&quot;&gt;DMS-1.50&lt;/dlna:X_DLNADOC&gt;&#xd;&#xa;&#x9;&#x9;&lt;microsoft:magicPacketWakeSupported xmlns:microsoft=&quot;urn:schemas-microsoft-com:WMPNSS-1-0&quot;&gt;1&lt;/microsoft:magicPacketWakeSupported&gt;&#xd;&#xa;&#x9;&#x9;&lt;iconList&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:776d7f46-03f5-4d02-a885-9d637499c97c&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:098fa225-0434-41c9-82e5-297a6d4c527f&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:65fb6425-1e6a-4895-9dda-c5fc28c30393&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:6ea408e5-e0f6-45b5-b19c-a09d7dab1a2b&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:4ffb025d-8dcb-41c0-aea0-d79ea811d520&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:8e2fb5b4-afaa-48db-a9ee-68477ca8a894&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:fd4b4bd9-31dd-409e-bb7d-4af191000732&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:eb176ef6-842c-4d8a-a631-c25383b8301c&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:64533a45-d8b8-450b-9445-4c1cd2a1dc23&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:2c3f7ca3-7609-4e63-adf6-a8a88262d5a6&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:56688cdf-8fd1-4126-86a8-d2f43ba3bc09&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:781dd282-9bc3-4819-a41f-8a76eda22c7a&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:14c301ac-9839-423c-8c99-39d619eb8d89&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:b56c55a8-e86a-49ac-8cf0-ec79fb9e2bde&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&lt;/iconList&gt;&#xd;&#xa;&#x9;&#x9;&lt;serviceList&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:schemas-upnp-org:service:ConnectionManager:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:upnp-org:serviceId:ConnectionManager&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:upnp-org:serviceId:ConnectionManager&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:upnp-org:serviceId:ConnectionManager&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:5fa6a6a6-7745-469e-8887-44c5633edbc9&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:schemas-upnp-org:service:ContentDirectory:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:upnp-org:serviceId:ContentDirectory&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:upnp-org:serviceId:ContentDirectory&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:upnp-org:serviceId:ContentDirectory&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:8dd93978-1c3f-4115-a08d-4ef8aa611dac&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5+urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:ac59c703-175c-47be-b43a-e3b1f138db7b&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&lt;/serviceList&gt;&#xd;&#xa;&#x9;&lt;/device&gt;&#xd;&#xa;&lt;/root&gt;&#xd;&#xa;</elem>
+<elem key="friendlyName">DONNASCOMPUTER: Donna Anthis:</elem>
+<elem key="manufacturer">Microsoft Corporation</elem>
+<elem key="modelName">Windows Media Player Sharing</elem>
+<elem key="modelNumber">12.0</elem>
+<elem key="HostServer">Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0</elem>
+<elem key="Location">http://10.0.0.4:2869/upnphost/udhisapi.dll?content=uuid:9a0b5314-c3f2-4d59-86e7-7a58cc41cdf5</elem>
+</table>
+</script></port>
+<port protocol="udp" portid="2223"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="rockwell-csp2" method="table" conf="3"/></port>
+<port protocol="udp" portid="3456"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="IISrpc-or-vat" method="table" conf="3"/></port>
+<port protocol="udp" portid="3702"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ws-discovery" method="table" conf="3"/><script id="wsdd-discover" output=" "><table>
+<elem key="Address">http://10.0.0.4:5357/6b603b16-b6d2-45e7-89c1-81500f6635d7/</elem>
+<elem key="rawdata">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;soap:Envelope xmlns:soap=&quot;http://www.w3.org/2003/05/soap-envelope&quot; xmlns:wsa=&quot;http://schemas.xmlsoap.org/ws/2004/08/addressing&quot; xmlns:wsd=&quot;http://schemas.xmlsoap.org/ws/2005/04/discovery&quot; xmlns:wsdp=&quot;http://schemas.xmlsoap.org/ws/2006/02/devprof&quot; xmlns:pub=&quot;http://schemas.microsoft.com/windows/pub/2005/07&quot;&gt;&lt;soap:Header&gt;&lt;wsa:To&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/wsa:To&gt;&lt;wsa:Action&gt;http://schemas.xmlsoap.org/ws/2005/04/discovery/ProbeMatches&lt;/wsa:Action&gt;&lt;wsa:MessageID&gt;urn:uuid:d37b9de4-e644-4989-842a-0d1ede4397c4&lt;/wsa:MessageID&gt;&lt;wsa:RelatesTo&gt;urn:uuid:31e8ca01-d41d-717d-83bb-50da94f5f2c9&lt;/wsa:RelatesTo&gt;&lt;wsd:AppSequence InstanceId=&quot;58&quot; SequenceId=&quot;urn:uuid:8b7975dd-45ea-4820-b69e-6951584ca77e&quot; MessageNumber=&quot;1958&quot;&gt;&lt;/wsd:AppSequence&gt;&lt;/soap:Header&gt;&lt;soap:Body&gt;&lt;wsd:ProbeMatches&gt;&lt;wsd:ProbeMatch&gt;&lt;wsa:EndpointReference&gt;&lt;wsa:Address&gt;urn:uuid:6b603b16-b6d2-45e7-89c1-81500f6635d7&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;wsd:Types&gt;wsdp:Device pub:Computer&lt;/wsd:Types&gt;&lt;wsd:XAddrs&gt;http://10.0.0.4:5357/6b603b16-b6d2-45e7-89c1-81500f6635d7/&lt;/wsd:XAddrs&gt;&lt;wsd:MetadataVersion&gt;13&lt;/wsd:MetadataVersion&gt;&lt;/wsd:ProbeMatch&gt;&lt;/wsd:ProbeMatches&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</elem>
+<elem key="MessageID">d37b9de4-e644-4989-842a-0d1ede4397c4</elem>
+<elem key="Type">Device pub:Computer</elem>
+<elem key="name">Devices</elem>
+</table>
+</script></port>
+<port protocol="udp" portid="4500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="5632"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="pcanywherestat" method="table" conf="3"/></port>
+<port protocol="udp" portid="30718"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="9"/>
+<osmatch name="Microsoft Windows Vista, Windows 7 SP1, or Windows 8.1 Update 1" accuracy="100" line="61968">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="100"><cpe>cpe:/o:microsoft:windows_vista</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="100"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="100"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1517812" lastboot="Wed Jan 14 03:23:23 2015"/>
+<distance value="1"/>
+<tcpsequence index="262" difficulty="Good luck!" values="1E209D66,CC4CEBE6,256DF550,8DE56D31,8DA0D946,10A08136"/>
+<ipidsequence class="Incremental" values="552F,5530,5531,5532,5533,5534"/>
+<tcptssequence class="100HZ" values="90BEE41,90BEE4C,90BEE57,90BEE62,90BEE6D,90BEE78"/>
+<times srtt="1519" rttvar="3042" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741602"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.5" addrtype="ipv4"/>
+<address addr="70:1A:04:1C:4C:14" addrtype="mac" vendor="Liteon Tech"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="99">
+<extrareasons reason="no-responses" count="99"/>
+</extraports>
+<extraports state="filtered" count="96">
+<extrareasons reason="no-responses" count="96"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="wsdapi" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="128"/><service name="netbios-ns" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<osmatch name="Microsoft Windows 7 Professional or Windows 8" accuracy="100" line="59289">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="100"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="100"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7" accuracy="100" line="61649">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="100"><cpe>cpe:/o:microsoft:windows_vista::-</cpe><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="100"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="100"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008" accuracy="100" line="61921">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="100"><cpe>cpe:/o:microsoft:windows_vista::sp2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="100"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="100"><cpe>cpe:/o:microsoft:windows_server_2008</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="256968" lastboot="Wed Jan 28 17:37:28 2015"/>
+<distance value="1"/>
+<tcpsequence index="255" difficulty="Good luck!" values="79A6E46D,BC2EFA20,C9373E6,2F78B83A,C505EE4C,D8D7B35"/>
+<ipidsequence class="Incremental" values="3CFA,3CFB,3CFC,3CFD,3CFE,3CFF"/>
+<tcptssequence class="100HZ" values="188089E,18808A9,18808B4,18808BF,18808CA,18808D5"/>
+<times srtt="8402" rttvar="13038" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741597"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.8" addrtype="ipv4"/>
+<address addr="00:05:FE:27:73:55" addrtype="mac" vendor="Traficon N.V."/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="191">
+<extrareasons reason="resets" count="98"/>
+<extrareasons reason="port-unreaches" count="93"/>
+</extraports>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-default-auth" output="nothing matched"/><script id="http-homepage" output=" "><table key="response_header">
+<elem>Server: JAWS/1.0 Apr  8 2014</elem>
+<elem>Content-Type: text/html</elem>
+<elem>Date: Sat, 31 Jan 2015 16:59:29 GMT</elem>
+<elem>Last-Modified: Mon, 16 Sep 2013 02:12:46 GMT</elem>
+<elem>Connection: close</elem>
+<elem>Content-Length: 2971</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&#xd;&#xa;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&#xd;&#xa;&lt;title&gt;&lt;/title&gt;&#xd;&#xa;&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&#xd;&#xa;&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt; &#xd;&#xa;&lt;link href=&quot;js/autosuggest.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;cgi-bin/jscript.cgi?c=lang&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;js/cookie.js&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;js/xml.js&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;js/autosuggest.js&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;script type=&quot;text/javascript&quot; src=&quot;js/index.js&quot;&gt;&lt;/script&gt;&#xd;&#xa;&lt;/head&gt;&#xd;&#xa;&lt;body style=&quot;margin:0px 0px 0px 0px;&quot;&gt;&#xd;&#xa;&lt;table width=&quot;100%&quot; height=&quot;100%&quot; border=&quot;0&quot;&gt;&#xd;&#xa;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&lt;td align=&quot;center&quot; valign=&quot;middle&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;table width=&quot;1024&quot; height=&quot;768&quot; border=&quot;0&quot; style=&quot;background-image:url(loginback.jpg); border-collapse:collapse;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;height:85px;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;height:128px;padding-left:100px; padding-right:100px;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;span lxc_lang=&quot;index_1&quot; style=&quot;font-size:24px;float:left;&quot;&gt;Network video client&lt;/span&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;height:436px;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;table width=&quot;100%&quot; border=&quot;0&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;width:517px;&quot;&gt;&amp;nbsp;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td align=&quot;center&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;table width=&quot;354&quot; height=&quot;353&quot; border=&quot;0&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;padding-left:20px;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;span lxc_lang=&quot;index_Username&quot;&gt;Username:&lt;/span&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;input type=&quot;text&quot; id=&quot;dvr_usr&quot; value=&quot;admin&quot; size=&quot;20&quot; style=&quot;width:150px;&quot;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;onfocus=&quot;show_suggest()&quot; onDblClick=&quot;show_suggest()&quot; /&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;padding-left:20px;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;span lxc_lang=&quot;index_Password&quot;&gt;Password:&lt;/span&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;input type=&quot;password&quot; id=&quot;dvr_pwd&quot; value=&quot;&quot; size=&quot;20&quot; style=&quot;width:150px;&quot; /&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;input type=&quot;checkbox&quot; id=&quot;dvr_remember&quot; name=&quot;dvr_remember&quot; checked=&quot;checked&quot; /&gt;&lt;span lxc_lang=&quot;index_Remember_me&quot;&gt;Remember me&lt;/span&gt;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;input type=&quot;button&quot; onClick=&quot;login_chk_usr_pwd();&quot; value= &quot;Login&quot; lxc_lang=&quot;index_Login&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td colspan=&quot;2&quot; style=&quot;padding-left:10px;padding-right:10px;&quot;&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;span lxc_lang=&quot;index_2&quot; style=&quot;color:#000000&quot;&gt;&lt;/span&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/table&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/table&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&quot;&quot;&gt;&amp;nbsp;&lt;/td&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/table&gt;&#xd;&#xa;&#x9;&#x9;&lt;/td&gt;&#xd;&#xa;&#x9;&lt;/tr&gt;&#xd;&#xa;&lt;/table&gt;&#xd;&#xa;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;</elem>
+</script></port>
+<port protocol="udp" portid="17"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="qotd" method="table" conf="3"/></port>
+<port protocol="udp" portid="177"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="xdmcp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1645"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="radius" method="table" conf="3"/></port>
+<port protocol="udp" portid="5000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="31337"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="BackOrifice" method="table" conf="3"/></port>
+<port protocol="udp" portid="49181"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="49200"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="23"/>
+<portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="7"/>
+<osmatch name="Hikvision 7200 or Q-SEE QT5440 or QT5682 DVR" accuracy="96" line="26239">
+<osclass type="specialized" vendor="Hikvision" osfamily="Linux" accuracy="96"><cpe>cpe:/o:hikvision:linux_kernel</cpe></osclass>
+<osclass type="specialized" vendor="Q-SEE" osfamily="Linux" accuracy="96"><cpe>cpe:/o:q-see:linux_kernel</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="93" line="47048">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt (Linux 2.4.32)" accuracy="93" line="38628">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.4</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt White Russian 0.9 (Linux 2.4.30)" accuracy="93" line="38735">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.4</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt (Linux 3.2)" accuracy="93" line="50894">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="92" line="52028">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt (Linux 3.0)" accuracy="92" line="50873">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="92" line="51462">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18 - 2.6.31" accuracy="92" line="41526">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt (Linux 2.6.39)" accuracy="91" line="38887">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=6.47%E=4%D=1/31%OT=23%CT=7%CU=7%PV=Y%DS=1%DC=D%G=Y%M=0005FE%TM=54&#xa;OS:CD5071%P=i686-pc-windows-windows)SEQ(SP=106%GCD=1%ISR=107%TI=Z%CI=Z%II=I&#xa;OS:%TS=U)SEQ(CI=Z%II=I)SEQ(TI=Z%CI=Z%II=I%TS=U)OPS(O1=M5B4NNSNW6%O2=M5B4NNS&#xa;OS:NW6%O3=M5B4NW6%O4=M5B4NNSNW6%O5=M5B4NNSNW6%O6=M5B4NNS)WIN(W1=3908%W2=390&#xa;OS:8%W3=3908%W4=3908%W5=3908%W6=3908)ECN(R=Y%DF=Y%T=40%W=3908%O=M5B4NNSNW6%&#xa;OS:CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W&#xa;OS:=3908%S=O%A=S+%F=AS%O=M5B4NNSNW6%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=&#xa;OS:R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T&#xa;OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=&#xa;OS:0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(&#xa;OS:R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="1"/>
+<ipidsequence class="All zeros" values="0,0,0"/>
+<tcptssequence class="none returned (unsupported)"/>
+<times srtt="40623" rttvar="70164" to="321279"/>
+</host>
+<host starttime="1422741428" endtime="1422741601"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.9" addrtype="ipv4"/>
+<address addr="D4:85:64:A2:6E:BB" addrtype="mac" vendor="Hewlett-Packard Company"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="98">
+<extrareasons reason="no-responses" count="98"/>
+</extraports>
+<extraports state="filtered" count="95">
+<extrareasons reason="no-responses" count="95"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="554"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="rtsp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="wsdapi" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="128"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="open" reason="script-set" reason_ttl="0"/><service name="upnp" method="table" conf="3"/><script id="upnp-info" output=" "><table>
+<table key="response_header">
+<elem>Content-Length: 5804</elem>
+<elem>Content-Type: text/xml; charset=&quot;utf-8&quot;</elem>
+<elem>Server: Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0 Microsoft-HTTPAPI/2.0</elem>
+<elem>Date: Sat, 31 Jan 2015 22:00:08 GMT</elem>
+<elem>Connection: close</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;?xml version=&quot;1.0&quot;?&gt;&#xd;&#xa;&lt;root xmlns=&quot;urn:schemas-upnp-org:device-1-0&quot;&gt;&#xd;&#xa;&#x9;&lt;specVersion&gt;&#xd;&#xa;&#x9;&#x9;&lt;major&gt;1&lt;/major&gt;&#xd;&#xa;&#x9;&#x9;&lt;minor&gt;0&lt;/minor&gt;&#xd;&#xa;&#x9;&lt;/specVersion&gt;&#xd;&#xa;&#x9;&lt;device&gt;&#xd;&#xa;&#x9;&#x9;&lt;UDN&gt;uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e&lt;/UDN&gt;&#xd;&#xa;&#x9;&#x9;&lt;friendlyName&gt;MATT-PC: Matt:&lt;/friendlyName&gt;&#xd;&#xa;&#x9;&#x9;&lt;deviceType&gt;urn:schemas-upnp-org:device:MediaServer:1&lt;/deviceType&gt;&#xd;&#xa;&#x9;&#x9;&lt;manufacturer&gt;Microsoft Corporation&lt;/manufacturer&gt;&#xd;&#xa;&#x9;&#x9;&lt;manufacturerURL&gt;http://www.microsoft.com&lt;/manufacturerURL&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelName&gt;Windows Media Player Sharing&lt;/modelName&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelNumber&gt;12.0&lt;/modelNumber&gt;&#xd;&#xa;&#x9;&#x9;&lt;modelURL&gt;http://go.microsoft.com/fwlink/?LinkId=105926&lt;/modelURL&gt;&#xd;&#xa;&#x9;&#x9;&lt;serialNumber&gt;{E4D44AC9-D8C3-45A9-A34C-0EED98145EF5}&lt;/serialNumber&gt;&#xd;&#xa;&#x9;&#x9;&lt;dlna:X_DLNADOC xmlns:dlna=&quot;urn:schemas-dlna-org:device-1-0&quot;&gt;DMS-1.50&lt;/dlna:X_DLNADOC&gt;&#xd;&#xa;&#x9;&#x9;&lt;microsoft:magicPacketWakeSupported xmlns:microsoft=&quot;urn:schemas-microsoft-com:WMPNSS-1-0&quot;&gt;1&lt;/microsoft:magicPacketWakeSupported&gt;&#xd;&#xa;&#x9;&#x9;&lt;iconList&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:6caa9857-73e7-4694-8091-f5e22ccfff50&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:a63e7b22-c7c5-4caf-9fa3-8080deae6e2f&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:ef738375-25bf-4a26-9b05-ce6dc8fc0114&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:6041d4f8-eb67-4933-ba00-7c007b048f2f&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:23c414b6-f6a1-4d22-bc26-d74d37c95ee0&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:f5ef9385-30fb-4f85-9694-1f4e52550e23&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:ba626e0f-c78f-405a-835e-172ce783ca9c&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:98e3ae44-a08b-409a-bb51-7477d2e3ddd5&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;120&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;120&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:24e7c18e-9dca-4469-b74d-b295a15ff40a&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:749c7492-675e-4e49-a5ce-55ad565bfedd&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/png&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:f14db174-ab42-46be-8d13-b92b1139547b&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;48&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;48&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:b6e3dfca-b2c3-45df-be35-d61818c08504&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/jpeg&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;24&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:56f5a63e-979b-4ee0-afa9-5e775a526f34&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;icon&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;mimetype&gt;image/bmp&lt;/mimetype&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;width&gt;32&lt;/width&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;height&gt;32&lt;/height&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;depth&gt;16&lt;/depth&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;url&gt;/upnphost/udhisapi.dll?content=uuid:46f636a2-c7b4-45c2-8d0a-73de3b836ca2&lt;/url&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/icon&gt;&#xd;&#xa;&#x9;&#x9;&lt;/iconList&gt;&#xd;&#xa;&#x9;&#x9;&lt;serviceList&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:schemas-upnp-org:service:ConnectionManager:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:upnp-org:serviceId:ConnectionManager&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:upnp-org:serviceId:ConnectionManager&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:upnp-org:serviceId:ConnectionManager&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:5be55df0-10d5-4bf2-b98d-72ebb3859de3&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:schemas-upnp-org:service:ContentDirectory:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:upnp-org:serviceId:ContentDirectory&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:upnp-org:serviceId:ContentDirectory&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:upnp-org:serviceId:ContentDirectory&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:9d59b22d-0e8c-4244-a265-62b9e4ff7f98&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;service&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceType&gt;urn:microsoft.com:service:X_MS_MediaReceiverRegistrar:1&lt;/serviceType&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;serviceId&gt;urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/serviceId&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;controlURL&gt;/upnphost/udhisapi.dll?control=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/controlURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;eventSubURL&gt;/upnphost/udhisapi.dll?event=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e+urn:microsoft.com:serviceId:X_MS_MediaReceiverRegistrar&lt;/eventSubURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&#x9;&lt;SCPDURL&gt;/upnphost/udhisapi.dll?content=uuid:0b70b694-4996-409d-b386-3f3470c2911e&lt;/SCPDURL&gt;&#xd;&#xa;&#x9;&#x9;&#x9;&lt;/service&gt;&#xd;&#xa;&#x9;&#x9;&lt;/serviceList&gt;&#xd;&#xa;&#x9;&lt;/device&gt;&#xd;&#xa;&lt;/root&gt;&#xd;&#xa;</elem>
+<elem key="friendlyName">MATT-PC: Matt:</elem>
+<elem key="manufacturer">Microsoft Corporation</elem>
+<elem key="modelName">Windows Media Player Sharing</elem>
+<elem key="modelNumber">12.0</elem>
+<elem key="HostServer">Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0</elem>
+<elem key="Location">http://10.0.0.9:2869/upnphost/udhisapi.dll?content=uuid:75c4aee8-a2b0-48f5-8c18-e991d569c96e</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<osmatch name="iPXE 1.0.0+" accuracy="100" line="33523">
+<osclass type="specialized" vendor="iPXE" osfamily="iPXE" osgen="1.X" accuracy="100"><cpe>cpe:/o:ipxe:ipxe:1.0.0%2b</cpe></osclass>
+</osmatch>
+<osmatch name="Tomato 1.28 (Linux 2.4.20)" accuracy="100" line="36942">
+<osclass type="WAP" vendor="Linksys" osfamily="Linux" osgen="2.4.X" accuracy="100"><cpe>cpe:/o:linksys:linux_kernel:2.4</cpe></osclass>
+</osmatch>
+<osmatch name="Tomato firmware (Linux 2.6.22)" accuracy="100" line="50855">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Sony Ericsson U8i Vivaz mobile phone" accuracy="100" line="77940">
+<osclass type="phone" vendor="Sony Ericsson" osfamily="embedded" accuracy="100"><cpe>cpe:/h:sonyericsson:u8i_vivaz</cpe></osclass>
+</osmatch>
+</os>
+<distance value="1"/>
+<times srtt="4825" rttvar="8985" to="100000"/>
+</host>
+<host starttime="1422741428" endtime="1422741582"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.11" addrtype="ipv4"/>
+<address addr="60:BE:B5:AB:E8:E4" addrtype="mac" vendor="Motorola Mobility"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="194">
+<extrareasons reason="resets" count="100"/>
+<extrareasons reason="port-unreaches" count="94"/>
+</extraports>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="593"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="http-rpc-epmap" method="table" conf="3"/></port>
+<port protocol="udp" portid="5000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="5060"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="udp" portid="30718"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="7"/>
+</os>
+<distance value="1"/>
+<times srtt="323460" rttvar="129081" to="839784"/>
+</host>
+<runstats><finished time="1422741617" timestr="Sat Jan 31 17:00:17 2015" elapsed="191.22" summary="Nmap done at Sat Jan 31 17:00:17 2015; 8 IP addresses (8 hosts up) scanned in 191.22 seconds" exit="success"/><hosts up="8" down="0" total="8"/>
+</runstats>
+</nmaprun>

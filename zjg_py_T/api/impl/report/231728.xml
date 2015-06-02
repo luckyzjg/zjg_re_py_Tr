@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<!DOCTYPE nmaprun>
+<!-- Nmap 6.47 scan initiated Mon Apr 13 10:47:26 2015 as: C:\\Users\\Admin\\AppData\\Local\\Temp\\HouseCall\\tmase\\nmap\\nmap.exe -T4 -O -sS -sU -F -v -&#45;script housecall -oX C:\\Users\\Admin\\AppData\\Local\\Temp\\TmEnv\\nmap.xml -&#45;no-stylesheet 192.168.1.1 192.168.1.2 192.168.1.5 -->
+<nmaprun scanner="nmap" args="C:\\Users\\Admin\\AppData\\Local\\Temp\\HouseCall\\tmase\\nmap\\nmap.exe -T4 -O -sS -sU -F -v -&#45;script housecall -oX C:\\Users\\Admin\\AppData\\Local\\Temp\\TmEnv\\nmap.xml -&#45;no-stylesheet 192.168.1.1 192.168.1.2 192.168.1.5" start="1428936446" startstr="Mon Apr 13 10:47:26 2015" version="6.47" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3702-3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49191-49194,49200-49201,65024"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1428936448"/>
+<taskend task="ARP Ping Scan" time="1428936449" extrainfo="3 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 3 hosts." time="1428936457"/>
+<taskend task="Parallel DNS resolution of 3 hosts." time="1428936457"/>
+<host><status state="down" reason="no-response" reason_ttl="0"/>
+<address addr="192.168.1.2" addrtype="ipv4"/>
+</host>
+<taskbegin task="SYN Stealth Scan" time="1428936457"/>
+<taskend task="SYN Stealth Scan" time="1428936458" extrainfo="200 total ports"/>
+<taskbegin task="UDP Scan" time="1428936458"/>
+<taskend task="UDP Scan" time="1428936492" extrainfo="200 total ports"/>
+<taskbegin task="NSE" time="1428936496"/>
+<taskend task="NSE" time="1428936506"/>
+<host starttime="1428936448" endtime="1428936506"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<address addr="00:24:B2:2A:9A:E8" addrtype="mac" vendor="Netgear"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="194">
+<extrareasons reason="port-unreaches" count="97"/>
+<extrareasons reason="resets" count="97"/>
+</extraports>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.1.1&#xa;  url                     method&#xa;  http://192.168.1.1:80/  HTTP: Basic&#xa;"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-default-auth" output=" "><table key="Basic Authentication for all models[admin:password]">
+<elem key="path">/</elem>
+<table key="response_header">
+<elem>Content-length: 229</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="response_body">&lt;HTML&gt;&lt;HEAD&gt;&#xd;&#xa;&lt;META content=&quot;text/html; charset=iso-8859-1&quot; http-equiv=Content-Type&gt;&#xd;&#xa;&lt;META content=&quot;MSHTML 5.00.2920.0&quot; name=GENERATOR&gt;&lt;/HEAD&gt;&#xd;&#xa;&lt;BODY&gt;ANDROID-195AFDDDEBB4F47B (192.168.1.2) is managing this device&lt;/BODY&gt;&lt;/HTML&gt;&#xd;&#xa;</elem>
+<elem key="check_status">true</elem>
+<elem key="response_status">200</elem>
+</table>
+<table key="Basic Authentication for all models[admin:admin]">
+<elem key="path">/</elem>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+<elem key="check_status">false</elem>
+<elem key="response_status">401</elem>
+</table>
+</script><script id="http-headers" output="&#xa;  WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;&#xa;  Content-type: text/html&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-homepage" output=" "><table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="response_status">401</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</script><script id="http-title" output="401 Unauthorized"><elem key="title">401 Unauthorized</elem>
+</script><script id="tm-http-auth" output=" "><table key="tm-http-auth-1">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">admin</elem>
+<elem key="password">admin</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-2">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">200</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">admin</elem>
+<elem key="password">password</elem>
+</table>
+<table key="response_header">
+<elem>Content-length: 229</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">true</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;HTML&gt;&lt;HEAD&gt;&#xd;&#xa;&lt;META content=&quot;text/html; charset=iso-8859-1&quot; http-equiv=Content-Type&gt;&#xd;&#xa;&lt;META content=&quot;MSHTML 5.00.2920.0&quot; name=GENERATOR&gt;&lt;/HEAD&gt;&#xd;&#xa;&lt;BODY&gt;ANDROID-195AFDDDEBB4F47B (192.168.1.2) is managing this device&lt;/BODY&gt;&lt;/HTML&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-3">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">admin</elem>
+<elem key="password">1234</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-4">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">root</elem>
+<elem key="password">root</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-5">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">root</elem>
+<elem key="password">password</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-6">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">root</elem>
+<elem key="password">1234</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-7">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">guest</elem>
+<elem key="password">guest</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+<table key="tm-http-auth-8">
+<elem key="pattern_id">900000</elem>
+<elem key="response_status">401</elem>
+<table key="validation">
+<table key="http_response_code">
+<elem>200</elem>
+<elem>302</elem>
+</table>
+</table>
+<elem key="check_type">1</elem>
+<table key="credential">
+<elem key="username">user</elem>
+<elem key="password">user</elem>
+</table>
+<table key="response_header">
+<elem>WWW-Authenticate: Basic realm=&quot;WGR614v7&quot;</elem>
+<elem>Content-type: text/html</elem>
+<elem></elem>
+</table>
+<elem key="check_status">false</elem>
+<elem key="path">/</elem>
+<elem key="response_body">&lt;html&gt;&#xd;&#xa;&lt;head&gt;&lt;title&gt;401 Unauthorized&lt;/title&gt;&lt;/head&gt;&#xd;&#xa;&lt;body&gt;&lt;h1&gt;401 Unauthorized&lt;/h1&gt;&#xd;&#xa;&lt;p&gt;Access to this resource is denied; your client has not supplied the correct authentication.&lt;/p&gt;&lt;/body&gt;&#xd;&#xa;&lt;/html&gt;&#xd;&#xa;</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="udp" portid="9"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="discard" method="table" conf="3"/></port>
+<port protocol="udp" portid="53"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="23"/>
+<portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="7"/>
+<osmatch name="Netgear WGR614v7 or WGT624v3 WAP" accuracy="100" line="69195">
+<osclass type="WAP" vendor="Netgear" osfamily="embedded" accuracy="100"/>
+</osmatch>
+</os>
+<distance value="1"/>
+<times srtt="17514" rttvar="17743" to="100000"/>
+</host>
+<host starttime="1428936448" endtime="1428936501"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.5" addrtype="ipv4"/>
+<address addr="14:2D:27:83:1A:04" addrtype="mac" vendor="Hon Hai Precision Ind. Co."/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="140">
+<extrareasons reason="resets" count="100"/>
+<extrareasons reason="port-unreaches" count="40"/>
+</extraports>
+<extraports state="open|filtered" count="59">
+<extrareasons reason="no-responses" count="59"/>
+</extraports>
+<port protocol="udp" portid="1900"><state state="open" reason="script-set" reason_ttl="0"/><service name="upnp" method="table" conf="3"/><script id="upnp-info" output=" "><table>
+<table key="response_header">
+<elem>Connection: close</elem>
+<elem>Application-URL: http://192.168.1.5:50202/apps/</elem>
+<elem>Content-Type: text/xml</elem>
+<elem>Date: Mon, 13 Apr 2015 14:47:36 GMT</elem>
+<elem>Server: Linux/2.6 Sony-BDP/2.0</elem>
+<elem></elem>
+</table>
+<elem key="response_status">200</elem>
+<elem key="response_body">&lt;?xml version=&quot;1.0&quot;?&gt;&#xa;&lt;root xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&#xa; xsi:schemaLocation=&quot;urn:schemas-upnp-org:device-1-0 Device.xsd&quot;&#xa; xmlns=&quot;urn:schemas-upnp-org:device-1-0&quot;&gt;&#xa;  &lt;specVersion&gt;&#xa;    &lt;major&gt;1&lt;/major&gt;&#xa;    &lt;minor&gt;0&lt;/minor&gt;&#xa;  &lt;/specVersion&gt;&#xa;  &lt;device&gt;&#xa;    &lt;deviceType&gt;urn:schemas-upnp-org:device:Basic:1&lt;/deviceType&gt;&#xa;    &lt;friendlyName&gt;Blu-ray Disc Player&lt;/friendlyName&gt;&#xa;    &lt;manufacturer&gt;Sony Corporation&lt;/manufacturer&gt;&#xa;    &lt;manufacturerURL&gt;http://www.sony.net/&lt;/manufacturerURL&gt;&#xa;    &lt;modelDescription&gt;&lt;/modelDescription&gt;&#xa;    &lt;modelName&gt;Blu-ray Disc Player&lt;/modelName&gt;&#xa;    &lt;modelURL&gt;&lt;/modelURL&gt;&#xa;    &lt;UDN&gt;uuid:00000004-0000-1010-8000-fcf152041fe1&lt;/UDN&gt;&#xa;    &lt;serviceList&gt;&#xa;      &lt;service&gt;&#xa;        &lt;serviceType&gt;urn:dial-multiscreen-org:service:dial:1&lt;/serviceType&gt;&#xa;        &lt;serviceId&gt;urn:dial-multiscreen-org:serviceId:dial&lt;/serviceId&gt;&#xa;        &lt;SCPDURL&gt;/dialSCPD.xml&lt;/SCPDURL&gt;&#xa;        &lt;controlURL&gt;/dial/control&lt;/controlURL&gt;&#xa;        &lt;eventSubURL&gt;/dial/event&lt;/eventSubURL&gt;&#xa;      &lt;/service&gt;&#xa;    &lt;/serviceList&gt;&#xa;    &lt;presentationURL&gt;&lt;/presentationURL&gt;&#xa;    &lt;av:X_DIALEX_DeviceInfo xmlns:av=&quot;urn:schemas-sony-com:av&quot;&gt;&#xa;      &lt;av:X_DIALEX_AppsListURL&gt;http://192.168.1.5:50202/appslist&lt;/av:X_DIALEX_AppsListURL&gt;&#xa;      &lt;av:X_DIALEX_DeviceID&gt;B0:00:02:AA:A7:29&lt;/av:X_DIALEX_DeviceID&gt;&#xa;      &lt;av:X_DIALEX_DeviceType&gt;BDP_DIAL&lt;/av:X_DIALEX_DeviceType&gt;&#xa;    &lt;/av:X_DIALEX_DeviceInfo&gt;&#xa;  &lt;/device&gt;&#xa;&lt;/root&gt;&#xa;</elem>
+<elem key="friendlyName">Blu-ray Disc Player</elem>
+<elem key="manufacturer">Sony Corporation</elem>
+<elem key="modelDescription"></elem>
+<elem key="modelName">Blu-ray Disc Player</elem>
+<elem key="HostServer">Linux/2.6 UPnP/1.0 Sony-BDP/2.0</elem>
+<elem key="Location">http://192.168.1.5:50201/dial.xml</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="9"/>
+</os>
+<distance value="1"/>
+<times srtt="2608" rttvar="5169" to="100000"/>
+</host>
+<runstats><finished time="1428936506" timestr="Mon Apr 13 10:48:26 2015" elapsed="61.51" summary="Nmap done at Mon Apr 13 10:48:26 2015; 3 IP addresses (2 hosts up) scanned in 61.51 seconds" exit="success"/><hosts up="2" down="1" total="3"/>
+</runstats>
+</nmaprun>

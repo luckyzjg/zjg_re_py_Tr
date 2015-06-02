@@ -1,0 +1,375 @@
+{
+	"patterns" : [
+		{
+			"brand" : "NETGEAR",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "B90-(\\d+)-15",
+					"re_match_index" : 0
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+)\\s\\(Gateway\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(WN.+) router",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "NETGEAR (.+) Router",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "TP-LINK",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Windows Media Connect Compatible \\((\\S+)\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(TD-.+)\\(UN\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+) IGD",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "D-LINK",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "(DIR-.+)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(DSL-\\w+) IGD",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "D-Link (DSL-\\w+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Thomson",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Thomson (.+) \\(.+\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(SpeedTouch .+) \\(.+\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(TG.+) \\(.+\\)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "ARRIS",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "ARRIS (.+) Router",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Technicolor",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+) \\(.+\\)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(Technicolor|MediaAccess) (T[GC]\\w+)",
+					"re_match_index" : 2
+				}
+			]
+		},
+		{
+			"brand" : "Kasda",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Kasda (KW\\w+)",
+					"re_match_index" : 2
+				}
+			]
+		},
+		{
+			"brand" : "Belkin",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(Belkin|Share) (.+?)\\s.+Router",
+					"re_match_index" : 2
+				},
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(N.+?)\\s.+Router",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "(F.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "ASUS",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "ASUS (.+)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "ASUS (.+) Wireless Router",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "(RT-.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "BUFFALO",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "BUFFALO (\\S+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "TRENDnet",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(TEW-.+)",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "(TEW-.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Cisco",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Linksys Series Router (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Linksys",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Linksys Series Router (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Westell",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "Westell (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Aztech",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Aztech (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "ZTE",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(Z.+) IGD",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "SMC",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+) router",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "ZyXEL",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "ZyXEL (.+) Internet Sharing Gateway",
+					"re_match_index" : 1
+				},
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "((PK|NBG)[-0-9a-zA-Z]\\w+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "CloudCommand",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='friendlyName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+) router",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Vivotek",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "Vivotek (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Ubee",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "Ubee (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "BEC",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "BEC (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Motorola",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Motorola (.+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Sagem",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "Sagem[Cc]om\\s?(0-9a-zA-Z]+)",
+					"re_match_index" : 1
+				}
+			]
+		},
+		{
+			"brand" : "Hitron",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelName']",
+					"key_type" : 1,
+					"re_match_ptn" : "(C.+) router",
+					"re_match_index" : 1
+				}
+			]
+		}
+	]
+}

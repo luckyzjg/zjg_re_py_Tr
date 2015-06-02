@@ -1,0 +1,15 @@
+{
+	"patterns" : [
+		{
+			"brand" : "VIVOTEK",
+			"ptn_list" : [
+				{
+					"key_name" : ".//elem[@key='modelNumber']",
+					"key_type" : 1,
+					"re_match_ptn" : "(.+)",
+					"re_match_index" : 1
+				}
+			]
+		}
+	]
+}

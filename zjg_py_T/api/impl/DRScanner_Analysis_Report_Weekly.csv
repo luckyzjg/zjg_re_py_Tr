@@ -1,0 +1,18 @@
+Date,Scan Date,HousCall Users,DR Scanner Users,Collected device count,Analysis device count,Device brand detection rate,Devices category detection rate,Unique device model count,Model detection rating for non-pc devices,Model detection rating for router
+2015/4/15,2015/4/1,unknown,unknown,unknown,4794,44.90%,34.36%,776,11.36%,21.97%
+2015/4/16,2015/4/2,unknown,unknown,unknown,2794,41.69%,33.27%,776,11.24%,21.60%
+2015/4/16,2015/4/3,unknown,unknown,unknown,2882,42.97%,32.85%,776,11.02%,20.88%
+2015/4/16,2015/4/4,unknown,unknown,unknown,2295,41.17%,30.64%,776,11.50%,22.66%
+2015/4/16,2015/4/5,unknown,unknown,unknown,2103,40.10%,29.23%,776,11.31%,22.85%
+2015/4/16,2015/4/6,unknown,unknown,unknown,2636,43.07%,33.66%,776,11.71%,22.84%
+2015/4/16,2015/4/7,unknown,unknown,unknown,2907,44.44%,35.37%,777,11.44%,21.45%
+2015/4/16,2015/4/8,unknown,unknown,unknown,2739,43.27%,33.52%,777,11.70%,21.76%
+2015/4/16,2015/4/9,unknown,unknown,unknown,3133,43.61%,34.50%,777,11.84%,21.68%
+2015/4/16,2015/4/10,unknown,unknown,unknown,2883,43.76%,34.42%,778,11.54%,22.16%
+2015/4/16,2015/4/11,unknown,unknown,unknown,2528,40.98%,30.51%,779,12.13%,22.65%
+2015/4/17,2015/4/15,unknown,unknown,unknown,3316,44.64%,35.28%,798,11.86%,21.66%
+2015/4/17,2015/4/15,unknown,unknown,unknown,3316,44.64%,35.28%,798,11.86%,21.66%
+2015/4/17,2015/4/16,unknown,unknown,unknown,3147,44.70%,35.96%,798,12.55%,22.02%
+2015-04-20,2015-04-17,unknown,unknown,unknown,2938,91.6937%,35.2659%,829,12.7412%,47.9957%
+2015-04-20,2015-04-18,unknown,unknown,unknown,2392,89.9479%,31.1458%,829,13.0708%,48.2181%
+2015-04-20,2015-04-19,unknown,unknown,unknown,2489,89.8162%,30.5025%,832,12.7156%,49.9462%

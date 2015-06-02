@@ -1,0 +1,1141 @@
+[
+    {
+        "IP": "http://192.168.1.254", 
+        "SourceSessionID": [
+            "107321"
+        ], 
+        "category": "routers", 
+        "id": "107321", 
+        "login_check": {
+            "credential": [
+                {
+                    "inputPassword": "password", 
+                    "inputUserName": "admin", 
+                    "nothankyou": "1", 
+                    "password_key": "inputPassword", 
+                    "username_key": "inputUserName"
+                }
+            ], 
+            "path": "login.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "new_username", 
+                        "new_password", 
+                        "index.html?msg=err"
+                    ]
+                }
+            }
+        }, 
+        "name": "Actiontec some unknown", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "Actiontec", 
+                    "new_username", 
+                    "new_password"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "205645"
+        ], 
+        "category": "routers", 
+        "id": "205645", 
+        "login_check": {
+            "credential": [
+                {
+                    "inputPassword": "password", 
+                    "inputUserName": "admin", 
+                    "nothankyou": "1", 
+                    "password_key": "inputPassword", 
+                    "username_key": "inputUserName"
+                }
+            ], 
+            "path": "/login.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "inputUserName", 
+                        "inputPassword", 
+                        "login.cgi"
+                    ]
+                }
+            }
+        }, 
+        "name": "Actiontec TelUS logo", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "inputUserName", 
+                    "inputPassword", 
+                    "login.cgi"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "223937"
+        ], 
+        "category": "routers", 
+        "id": "223937", 
+        "login_check": {
+            "credential": [
+                {
+                    "password_key": "pws", 
+                    "pws": "", 
+                    "username_key": ""
+                }, 
+                {
+                    "password_key": "pws", 
+                    "pws": "admin", 
+                    "username_key": ""
+                }
+            ], 
+            "path": "/cgi-bin/login.exe", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "login.exe"
+                    ]
+                }
+            }
+        }, 
+        "name": "Belkin", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "login.exe", 
+                    "belkin"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.11.1", 
+        "SourceSessionID": [
+            "103854"
+        ], 
+        "category": "routers", 
+        "id": "103854", 
+        "login_check": {
+            "credential": [
+                {
+                    "password_key": "pws", 
+                    "pws": "password", 
+                    "user": "admin", 
+                    "username_key": "user"
+                }, 
+                {
+                    "password_key": "pws", 
+                    "pws": "password", 
+                    "user": "root", 
+                    "username_key": "user"
+                }
+            ], 
+            "path": "/cgi-bin/login.exe", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "login.exe"
+                    ]
+                }
+            }
+        }, 
+        "name": "Buffalo", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "buffalo", 
+                    "login.exe"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.11.1", 
+        "SourceSessionID": [
+            "96950"
+        ], 
+        "category": "routers", 
+        "id": "96950", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "401 Unauthorized"
+                    ]
+                }
+            }
+        }, 
+        "name": "Buffalo Basic", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "buffalo", 
+                    "401", 
+                    "Unauthorized"
+                ]
+            }
+        }, 
+        "type": 1, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "0"
+        ], 
+        "category": "routers", 
+        "id": "900000", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "root", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "guest", 
+                    "password_key": "password", 
+                    "username": "guest", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "user", 
+                    "password_key": "password", 
+                    "username": "user", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "try_times": 5, 
+            "validation": {
+                "http_response_code": [
+                    200, 
+                    302
+                ]
+            }
+        }, 
+        "name": "Common 401 devices", 
+        "target_check": {
+            "http_response_code": [
+                401
+            ]
+        }, 
+        "type": 1, 
+        "version": "1.0.0.1001"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "60929", 
+            "63787"
+        ], 
+        "category": "routers", 
+        "id": "700000", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "root", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "guest", 
+                    "password_key": "password", 
+                    "username": "guest", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "user", 
+                    "password_key": "password", 
+                    "username": "user", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "location.reload()"
+                    ]
+                }, 
+                "http_response_code": [
+                    200
+                ]
+            }
+        }, 
+        "name": "Common Cookie", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "location.reload()"
+                ]
+            }, 
+            "http_response_code": [
+                200
+            ]
+        }, 
+        "type": 3, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "60929", 
+            "63787"
+        ], 
+        "category": "routers", 
+        "id": "700001", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "root", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "root", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "guest", 
+                    "password_key": "password", 
+                    "username": "guest", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "user", 
+                    "password_key": "password", 
+                    "username": "user", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "location.href"
+                    ]
+                }, 
+                "http_response_code": [
+                    200
+                ]
+            }
+        }, 
+        "name": "Common Cookie", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "location.href"
+                ]
+            }, 
+            "http_response_code": [
+                200
+            ]
+        }, 
+        "type": 3, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "227936"
+        ], 
+        "category": "routers", 
+        "id": "227936", 
+        "login_check": {
+            "credential": [
+                {
+                    "html_response_page": "login_fail.asp", 
+                    "log_pass": "", 
+                    "login": "Log In", 
+                    "login_n": "admin", 
+                    "login_name": "YWRtaW4A", 
+                    "login_pass": "", 
+                    "password_key": "log_pass", 
+                    "username_key": "login_n"
+                }, 
+                {
+                    "html_response_page": "login_fail.asp", 
+                    "log_pass": "admin", 
+                    "login": "Log In", 
+                    "login_n": "admin", 
+                    "login_name": "YWRtaW4A", 
+                    "login_pass": "YWRtaW4A", 
+                    "password_key": "log_pass", 
+                    "username_key": "login_n"
+                }, 
+                {
+                    "html_response_page": "login_fail.asp", 
+                    "log_pass": "password", 
+                    "login": "Log In", 
+                    "login_n": "admin", 
+                    "login_name": "YWRtaW4A", 
+                    "login_pass": "cGFzc3dvcmQA", 
+                    "password_key": "log_pass", 
+                    "username_key": "login_n"
+                }
+            ], 
+            "path": "/login.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "html_response_page", 
+                        "log_pass"
+                    ]
+                }
+            }
+        }, 
+        "name": "D-LINK DIR-615", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "html_response_page", 
+                    "log_pass"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "228742"
+        ], 
+        "category": "routers", 
+        "id": "228742", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/index.html", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "checkForm", 
+                        "doIninitialize"
+                    ]
+                }
+            }
+        }, 
+        "name": "D-LINK DSL-2640B", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "D-LINK", 
+                    "checkForm", 
+                    "doIninitialize"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "229392"
+        ], 
+        "category": "routers", 
+        "id": "229392", 
+        "login_check": {
+            "credential": [
+                {
+                    "ACTION_POST": "LOGIN", 
+                    "LOGIN_PASSWD": "", 
+                    "LOGIN_USER": "admin", 
+                    "login": "Anmelden", 
+                    "password_key": "LOGIN_PASSWD", 
+                    "username_key": "LOGIN_USER"
+                }, 
+                {
+                    "ACTION_POST": "LOGIN", 
+                    "LOGIN_PASSWD": "admin", 
+                    "LOGIN_USER": "admin", 
+                    "login": "Anmelden", 
+                    "password_key": "LOGIN_PASSWD", 
+                    "username_key": "LOGIN_USER"
+                }, 
+                {
+                    "ACTION_POST": "LOGIN", 
+                    "LOGIN_PASSWD": "password", 
+                    "LOGIN_USER": "admin", 
+                    "login": "Anmelden", 
+                    "password_key": "LOGIN_PASSWD", 
+                    "username_key": "LOGIN_USER"
+                }
+            ], 
+            "path": "/login.php", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "dlink.com", 
+                        "LOGIN_USER", 
+                        "LOGIN_PASSWD"
+                    ]
+                }
+            }
+        }, 
+        "name": "D-LINK DIR-300", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "dlink.com", 
+                    "LOGIN_USER", 
+                    "LOGIN_PASSWD"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "229738"
+        ], 
+        "category": "routers", 
+        "id": "229738", 
+        "login_check": {
+            "credential": [
+                {
+                    "login": "Log ln", 
+                    "login_name": "admin", 
+                    "login_pass": "", 
+                    "password_key": "login_pass", 
+                    "username_key": "login_name"
+                }, 
+                {
+                    "login": "Log ln", 
+                    "login_name": "admin", 
+                    "login_pass": "admin", 
+                    "password_key": "login_pass", 
+                    "username_key": "login_name"
+                }, 
+                {
+                    "login": "Log ln", 
+                    "login_name": "admin", 
+                    "login_pass": "password", 
+                    "password_key": "login_pass", 
+                    "username_key": "login_name"
+                }
+            ], 
+            "path": "/login.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "login.cgi"
+                    ]
+                }
+            }
+        }, 
+        "name": "D-LINK WBR-2310", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "D-LINK", 
+                    "login.cgi"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "60137"
+        ], 
+        "category": "routers", 
+        "id": "60137", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "Unauthorized"
+                    ]
+                }
+            }
+        }, 
+        "name": "Linksys Basic", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "401", 
+                    "Unauthorized"
+                ]
+            }, 
+            "http_header": {
+                "include": [
+                    "Linksys"
+                ]
+            }
+        }, 
+        "type": 1, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "205622"
+        ], 
+        "category": "routers", 
+        "id": "205622", 
+        "login_check": {
+            "credential": [
+                {
+                    "loginPassword": "motorola", 
+                    "loginUsername": "admin", 
+                    "password_key": "loginPassword", 
+                    "username_key": "loginUsername"
+                }, 
+                {
+                    "loginPassword": "Motorola", 
+                    "loginUsername": "admin", 
+                    "password_key": "loginPassword", 
+                    "username_key": "loginUsername"
+                }
+            ], 
+            "path": "/goform/login", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "loginUsername", 
+                        "loginPassword", 
+                        "submit"
+                    ]
+                }
+            }
+        }, 
+        "name": "Motorola", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "loginUsername", 
+                    "loginPassword", 
+                    "submit", 
+                    "Motorola"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "207066"
+        ], 
+        "category": "routers", 
+        "id": "207066", 
+        "login_check": {
+            "credential": [
+                {
+                    "btnLogin": "Log In", 
+                    "password": "motorola", 
+                    "password_key": "password", 
+                    "userId": "admin", 
+                    "username_key": "userId"
+                }, 
+                {
+                    "btnLogin": "Log In", 
+                    "password": "Motorola", 
+                    "password_key": "password", 
+                    "userId": "admin", 
+                    "username_key": "userId"
+                }
+            ], 
+            "path": "/frames.asp", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "frames.asp", 
+                        "btnLogin"
+                    ]
+                }
+            }
+        }, 
+        "name": "Motorola SBG900", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "Motorola", 
+                    "frames.asp"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "226288"
+        ], 
+        "category": "routers", 
+        "id": "226288", 
+        "login_check": {
+            "credential": [
+                {
+                    "LOG IN.x": 0, 
+                    "LOG IN.y": 0, 
+                    "PageName": "index.asp", 
+                    "action": "Login", 
+                    "password": "motorola", 
+                    "password_key": "password", 
+                    "userid": "admin", 
+                    "username_key": "userid"
+                }, 
+                {
+                    "LOG IN.x": 0, 
+                    "LOG IN.y": 0, 
+                    "PageName": "index.asp", 
+                    "action": "Login", 
+                    "password": "Motorola", 
+                    "password_key": "password", 
+                    "userid": "admin", 
+                    "username_key": "userid"
+                }
+            ], 
+            "path": "/sysconf.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "sysconf.cgi"
+                    ]
+                }
+            }
+        }, 
+        "name": "Motorola WR850G", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "sysconf.cgi"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "109841"
+        ], 
+        "category": "routers", 
+        "id": "109841", 
+        "login_check": {
+            "credential": [
+                {
+                    "password_key": "web0x120011", 
+                    "umi.loginAuth": "Login", 
+                    "username_key": "web0x120010", 
+                    "web0x120010": "admin", 
+                    "web0x120011": "password", 
+                    "web0x120019": "LOCALDOMAIN"
+                }
+            ], 
+            "path": "platform.cgi", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "loginValidate"
+                    ]
+                }
+            }
+        }, 
+        "name": "Netgear DEVG2020", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "netgear", 
+                    "loginValidate"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.15.1", 
+        "SourceSessionID": [
+            "62784"
+        ], 
+        "category": "routers", 
+        "id": "62784", 
+        "login_check": {
+            "credential": [
+                {
+                    "Password": "password", 
+                    "Username": "admin", 
+                    "next_page_ok": "/index.asp", 
+                    "password_key": "Password", 
+                    "username_key": "Username"
+                }
+            ], 
+            "path": "/goform/AdminAccessForm", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "Save_Confirm"
+                    ]
+                }
+            }
+        }, 
+        "name": "NETGEAR ProSafe Gigabit 8 Port VPN Firewall FVS318G", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "netgear", 
+                    "ProductionData_ModelNum"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "59609"
+        ], 
+        "category": "routers", 
+        "id": "59609", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "guest", 
+                    "password_key": "password", 
+                    "username": "guest", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "password", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "1234", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }, 
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "401 Authorization"
+                    ]
+                }
+            }
+        }, 
+        "name": "Netgear Basic", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "netgear", 
+                    "401", 
+                    "Authorization"
+                ]
+            }
+        }, 
+        "type": 1, 
+        "version": "1.0"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "205610"
+        ], 
+        "category": "routers", 
+        "id": "205610", 
+        "login_check": {
+            "credential": [
+                {
+                    "password_key": "pws", 
+                    "pws": "smcadmin", 
+                    "user": "admin", 
+                    "username_key": "user"
+                }, 
+                {
+                    "password_key": "pws", 
+                    "pws": "password", 
+                    "user": "admin", 
+                    "username_key": "user"
+                }, 
+                {
+                    "password_key": "pws", 
+                    "pws": "smcadmin", 
+                    "user": "root", 
+                    "username_key": "user"
+                }, 
+                {
+                    "password_key": "pws", 
+                    "pws": "highspeed", 
+                    "user": "cusadmin", 
+                    "username_key": "user"
+                }
+            ], 
+            "path": "/goform/login", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "username", 
+                        "password", 
+                        "reset"
+                    ]
+                }
+            }
+        }, 
+        "name": "SMC", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "www.smc.com"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }, 
+    {
+        "IP": "http://192.168.1.1", 
+        "SourceSessionID": [
+            "No"
+        ], 
+        "category": "routers", 
+        "id": "800000", 
+        "login_check": {
+            "credential": [
+                {
+                    "password": "admin", 
+                    "password_key": "password", 
+                    "username": "admin", 
+                    "username_key": "username"
+                }
+            ], 
+            "path": "/", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "CheckPswLength"
+                    ]
+                }, 
+                "http_response_code": [
+                    200
+                ]
+            }
+        }, 
+        "name": "TP-LINK TL-WR841N in CDC 303", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "TL-WR841N"
+                ]
+            }, 
+            "http_response_code": [
+                200
+            ]
+        }, 
+        "type": 3, 
+        "version": "1.0.0.2"
+    }, 
+    {
+        "IP": "http://192.168.0.1", 
+        "SourceSessionID": [
+            "222940"
+        ], 
+        "category": "routers", 
+        "id": "222940", 
+        "login_check": {
+            "credential": [
+                {
+                    "Login_Name": "admin", 
+                    "Login_Pwd": "Ha2S+eOKqmzA6nrlmTeh7w==", 
+                    "password_key": "Login_Pwd", 
+                    "timevalue": 0, 
+                    "tipsFlag": 0, 
+                    "uiWebLoginhiddenPassword": "21232f297a57a5a743894a0e4a801fc3", 
+                    "uiWebLoginhiddenUsername": "21232f297a57a5a743894a0e4a801fc3", 
+                    "username_key": "Login_Name"
+                }
+            ], 
+            "path": "/Forms/login_security_1", 
+            "validation": {
+                "http_body": {
+                    "exclude": [
+                        "uiWebLoginhiddenUsername", 
+                        "uiWebLoginhiddenPassword", 
+                        "login_security_1"
+                    ]
+                }
+            }
+        }, 
+        "name": "TP-LINK use MD5", 
+        "target_check": {
+            "http_body": {
+                "include": [
+                    "uiWebLoginhiddenUsername", 
+                    "uiWebLoginhiddenPassword", 
+                    "login_security_1"
+                ]
+            }
+        }, 
+        "type": 2, 
+        "version": "1.0.0.1"
+    }
+]
